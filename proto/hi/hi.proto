@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hi;
+
+option go_package = "./;hi";
+
+service Hi {
+  rpc SayHi(HiRequest) returns (HiResponse) {}
+}
+
+message HiRequest {
+  string name = 1;
+}
+
+message HiResponse {
+  string message = 1;
+}
